@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>列表搜索</title>
+{% endblock %}
+{#{% block style %}#}
+{##}
+{#    <link href="/static/css/bootstrap-theme.css">#}
+{#    <link href="/static/css/bootstrap.css">#}
+{#{% endblock %}#}
+{#{% block script %}#}
+{##}
+{#    <script src="/static/js/bootstrap.js"></script>#}
+{#    <script src="/static/js/bootstrap.min.js"></script>#}
+{#{% endblock %}#}
+
+{% block content %}
+    <form  method="get" name="searchform" id="searchform">
+    {% csrf_token %}
+
+        <input type="text"  placeholder="搜索" style="width:1700px; height: 34px; margin-left: 20px;" name="sousuo">
+        <input class="btn btn-default" type="submit" value="Submit">
+    </form>
+<div>
+    {% for post in sousuo_list %}
+        <h3><a href="">{{ post.title }}</a></h3>
+        <figure><img src="/static/images/img_1.jpg" alt="{{ post.title }}"></figure>
+        <ul>
+            <p>{{ post.desc }}</p>
+            <a title="{{ post.title }}" href="/zhuboke/detail/?id={{ post.id }}" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+        </ul>
+        <p class="dateview"><span>{{ post.created  }}</span><span>作者：</span>坚韧<span>个人博客：[<a href="/jstt/bj/">心得笔记</a>]</span>
+        </p>
+    {% empty %}
+        未查寻到结果.
+    {% endfor %}
+</div>
+{#            <div>#}
+{#                {% if perpage_data.has_previous %}#}
+{#                    <a href="/zhuboke/?num={{ perpage_data.previous_page_number }}" style="font-size: 28px;">上一页</a>#}
+{#                {% endif %}#}
+{#                {% for pages in pagelist %}#}
+{#                    {% if pages == current %}#}
+{#                        <a href="/zhuboke/?num={{ pages }}" style="font-size: 30px; color: red">{{ pages }}</a>#}
+{#                    {% else %}#}
+{#                        <a href="/zhuboke/?num={{ pages }}" style="font-size: 28px;">{{ pages }}</a>#}
+{#                    {% endif %}#}
+{#                {% endfor %}#}
+{##}
+{#                {% if perpage_data.has_next %}#}
+{#                    <a href="/zhuboke/?num={{ perpage_data.next_page_number }}" style="font-size: 28px;">下一页</a>#}
+{#                {% endif %}#}
+{#            </div>#}
+
+{% endblock %}
+

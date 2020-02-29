@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>个人简介</title>
+{% endblock %}
+
+
+{% block content %}
+    <style>
+        .shadow {
+            width: 910px;
+            height: 400px;
+            background-color: #fff;
+            -moz-box-shadow: 10px 10px 5px #888888;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+
+        .center {
+            color: #f2f2f2;
+            font-size: 24px;
+            text-align: center;
+            margin-left: 60px;
+            letter-spacing:15px;
+
+        }
+
+        .box {
+            content: '';
+            height: 400px;
+            width: 1px;
+            background: #000000;
+            display: inline-block;
+            vertical-align: middle;
+            float: left;
+        }
+
+        .box3 {
+            width: 270px;
+            height: 30px;
+            background-color: #747F8C;
+            float: left;
+
+        }
+
+        .sanjiao {
+
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-right: 20px solid #747F8C;
+            border-bottom: 15px solid transparent;
+            float: left;
+        }
+
+        .box2 {
+
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-left: 20px solid #747F8C;
+            border-bottom: 15px solid transparent;
+            float: left;
+        }
+
+        .size1 {
+            width: 310px;
+            height: 300px;
+            border: 1px;
+            float: left;
+
+        }
+
+
+
+        .box4 {
+            margin-top: 20px;
+            font-size:25px;
+        }
+        .name {
+            width: 599px;
+            height: 300px;
+            border: 1px;
+            float: left;
+        }
+
+        .images {
+            border: 1px;
+            width: 289px;
+            height: 400px;
+            float: left;
+        }
+
+        .zhongjian {
+            margin-top: 20px;
+            width: 910px;
+            height: 400px;
+            background-color: #fff;
+            -moz-box-shadow: 10px 10px 5px #888888;
+            box-shadow: 10px 10px 5px #888888;
+        }
+    </style>
+
+    <div class="container">
+        <div class="con_content">
+            <div class="about_box">
+                <h2 class="nh1"><span>您现在的位置是：<a href="/" target="_blank">网站首页</a>>><a href="#" target="_blank">信息浏览</a></span><b>个人简介</b>
+                </h2>
+                <div class="f_box">
+                    <p class="a_title">个人简介</p>
+                    <p class="p_title"></p>
+                    <div class="shadow">
+                        <div class="size1">
+                            <div class="sanjiao"></div>
+                            <div class="box3">
+                                <b class="center">基本信息</b>
+                                <div class="box4">
+                                    <ul>
+                                        <li><b>年 龄 :</b> 25 </li>
+                                        <li><b>电话号 :</b>1868614</li>
+                                        <li><b>地 址 :</b> 内蒙古鄂尔多斯</li>
+                                        <li><b>网 站 :</b>xiangqianxing.vip</li>
+                                        <li><b>邮 箱 :</b>396270694</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="box2"></div>
+                        </div>
+                        <b class="box"></b>
+                        <div class="name">
+                            <div class="sanjiao" style="margin-top: 120px"></div>
+                            <div class="box3" style="margin-top: 120px">
+                                <b class="center"> 杨 鑫 </b>
+                                <div class="box4">
+                                   <ul>
+                                       <li><b> 职位 :</b> Python开发工程师 </li>
+                                        <li>我不是天生的王者，但我骨子里的流淌的倔强的血液</li>
+                                   </ul>
+                                </div>
+                            </div>
+                            <div class="box2" style="margin-top: 120px"></div>
+                            <div class="images">
+                                <img src="/static/images/02.jpg" class="images">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zhongjian" style="height: 700px">
+                        <div class="size1" >
+                            <div class="sanjiao"></div>
+                            <div class="box3">
+                                <b class="center">专业技能</b>
+                            </div>
+                            <div class="box2"></div>
+                        </div>
+                        <b class="box" style="height: 700px"></b>
+                        <div class="name" >
+
+                            <div class="box4">
+                               <ul>
+                                   <li><b>Python开发基础 : </b> 掌握基本Python程序开发语言(基本数据类型、函数、高级特性、函数式编程、模块、面向对象编程、IO编程、进程、线程、正则)</li>
+                                   <li style="margin-top: 20px"><b>Python全栈开发 : </b>熟练使用Linux常用命令熟悉网络编程Socket（TCP/UDP)熟练使用MySQL常用数据库操作语言、了解Mongodb数</li>
+                                   <li style="margin-top: 20px"><b>据库、Redis数据库 : </b>掌握Web前端基础开发语言（如：HTML、CSS、JavaScript)掌握Bootstrap框架，了解jQuery框架，了解Vue框架 熟练使用Django Web开发框架，了解Flask 和Tornado</li>
+                                   <li style="margin-top: 20px"><b>Web开发框架 : </b>Python拓展  : 熟悉网络爬虫的Scrapy框架，了解爬虫原理与数据提取，了解反爬虫机制 数据结构及其算法 : 熟悉树、栈、队列，熟悉分治算法、了解贪心算法、动态规划 了解KNN及Kmeans算法</li>
+                               </ul>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="zhongjian" style="height: 350px">
+                        <div class="size1" >
+                            <div class="sanjiao"></div>
+                            <div class="box3">
+                                <b class="center">教育背景</b>
+                            </div>
+                            <div class="box2"></div>
+                        </div>
+                        <b class="box" style="height: 350px"></b>
+                        <div class="name" >
+
+                            <div class="box4">
+                               <ul>
+                                   <li><b>2016-2019   包头职业技术学院 计算机与信息技术:</b></li>
+                                   <li>&nbsp;&nbsp;&nbsp;&nbsp; 主修课程: </li>
+                                   <li style="margin-left:60px; border:1px">C语言、计算机技术基础、计算机组成原理、高等数学、离散数学、线性代数、数据结构、概率论与数理统计、算法设计与分析、Java程序设计、数据库原理与应用、linux操作系统、计算机网络、web应用程序开发、软件质量保证与测试、软件项目管理、编译原理</li>
+                               </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="blank"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
